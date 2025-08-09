@@ -1,0 +1,151 @@
+html, body {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  /* margin: 0;
+  padding: 0; */
+  overflow-x: hidden;
+}
+
+header{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 60px; */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* control spacing between logo and search bar */
+}
+
+.logo img {
+  width: 200px;
+  height: 90px;
+}
+
+.search-input {
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  /* overflow: hidden; */
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 700px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-input:hover{
+  border: 2px solid rgb(7, 91, 160);
+}
+
+.icon-bar {
+  display: flex;
+  gap: 40px; /* spacing between icons */
+  justify-content: center; /* center icons horizontally */
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 60px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column; /* stack icon and text vertically */
+  align-items: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #989797; /* makes the icons and text grey */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon-item i {
+  font-size: 24px; /* size of the icon */
+  margin-bottom: 5px; /* spacing between icon and text */
+}
+
+.icon-item:hover {
+  color: rgb(7, 91, 160); /* optional: change color on hover */
+}
+
+.header {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: rgb(185, 224, 255); */
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;                   /* Make nav links line up horizontally */
+  gap: 30px;                       /* Space between links */
+  padding: 10px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(7, 91, 160);
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family:  Arial, sans-serif;
+  transition: 0.3S ease-in-out;
+}
+
+/* .background {
+  font-family: Arial, sans-serif;
+  background-color: rgb(221, 240, 255); 
+  display: flex; 
+  justify-content: space-evenly;                     
+  flex-wrap: wrap;
+  flex-direction: row;                
+  height: 800px;                    
+  width: 100%;
+  padding: 25px 20px;
+} */
+
+.background {
+  font-family: Arial, sans-serif;
+  background-color: rgb(221, 240, 255); 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 30px; /* spacing between cards */
+  padding: 25px 30px;
+  box-sizing: border-box;
+}
+
+.cart {
+  height: 350px;
+  width: 300px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: rgb(7, 91, 160);
+  padding: 20px;
+  margin-left: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-img {
+  width: 100%;
+  height: 250px;
+  background-color: bisque;
+  overflow: hidden;
+}
+
+.cart-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#Price{
+  font-weight: 600;
+}

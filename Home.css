@@ -1,0 +1,181 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 60px; */
+  /* background-color: rgb(255, 215, 208); */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* control spacing between logo and search bar */
+}
+
+.logo img {
+  width: 200px;
+  height: 90px;
+}
+
+.search-input {
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  /* overflow: hidden; */
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 700px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-input:hover{
+  border: 2px solid rgb(7, 91, 160);
+}
+
+.icon-bar {
+  display: flex;
+  gap: 40px; /* spacing between icons */
+  justify-content: center; /* center icons horizontally */
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 60px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column; /* stack icon and text vertically */
+  align-items: center;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #989797; /* makes the icons and text grey */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon-item i {
+  font-size: 24px; /* size of the icon */
+  margin-bottom: 5px; /* spacing between icon and text */
+}
+
+.icon-item:hover {
+  color: rgb(7, 91, 160); /* optional: change color on hover */
+}
+
+.header {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: rgb(185, 224, 255); */
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;                   /* Make nav links line up horizontally */
+  gap: 30px;                       /* Space between links */
+  padding: 10px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(7, 91, 160);
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family:  Arial, sans-serif;
+  transition: 0.3S ease-in-out;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 700px; /* Full screen height */
+  margin-top: 3px;
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 300%; /* 3 images */
+  height: 100%;
+  animation: slide 12s infinite;
+}
+
+.slider img {
+  width: 100vw;
+  height: 700px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Gradient overlay */
+.slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: white;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+}
+
+.content p{
+  font-size: large;
+}
+
+button {
+  background-color: rgb(7, 91, 160);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@keyframes slide {
+  0%, 25% {
+    transform: translateX(0%);
+  }
+  30%, 55% {
+    transform: translateX(-100vw);
+  }
+  60%, 85% {
+    transform: translateX(-200vw);
+  }
+  90%, 100% {
+    transform: translateX(0%);
+  }
+}
